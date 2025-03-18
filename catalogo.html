@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos</title>
+  <link rel="stylesheet" href="catalogo.css"> <!-- Vincula correctamente el archivo CSS -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Tienda de Maquillaje</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Enlace agregado para redirigir al carrito -->
+        <div id="cart" aria-label="Carrito de compras">
+            <!-- Envolvemos el carrito en un enlace que redirige a carrito.html -->
+            <a href="carrito.html">
+                🛒 Carrito: $<span id="cart-total">0.00</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Formulario de búsqueda -->
+    <section id="search">
+        <input type="text" id="search-bar" placeholder="Buscar productos..." aria-label="Buscar productos">
+        <button id="search-button" aria-label="Buscar">Buscar</button>
+    </section>
+
+    <main>
+        <!-- Filtro de categorías -->
+        <div class="filters">
+            <label for="category-filter">Filtrar por categoría:</label>
+            <select id="category-filter">
+                <option value="all">Todos</option>
+                <option value="lipsticks">Labiales</option>
+                <option value="mascaras">Rímeles</option>
+                <option value="blushes">Coloretes</option>
+            </select>
+        </div>
+
+        <!-- Productos -->
+        <div class="product" data-id="1" data-price="20000" data-category="lipsticks">
+            <img src="labial.jpg" alt="Labial Mate" aria-label="Labial Mate">
+            <h2>Labial Mate</h2>
+            <p>Precio: $20.00</p>
+            <button class="add-to-cart" aria-label="Agregar al carrito">Agregar al carrito</button>
+        </div>
+
+        <div class="product" data-id="2" data-price="15000" data-category="mascaras">
+            <img src="rimel.jpg" alt="Rímel Volumen" aria-label="Rímel Volumen">
+            <h2>Rímel Volumen</h2>
+            <p>Precio: $15.00</p>
+            <button class="add-to-cart" aria-label="Agregar al carrito">Agregar al carrito</button>
+        </div>
+
+        <!-- Agregar más productos aquí -->
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tienda de Maquillaje. Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </footer>
+
+    <script src="catalogo.js"></script> <!-- Vincula el archivo JS para el carrito -->
+</body>
+</html>

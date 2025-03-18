@@ -1,0 +1,150 @@
+/* Estilos generales para la página del catálogo */
+body {
+    font-family: 'Arial', sans-serif; /* Tipo de letra para toda la página */
+    background-color: #f8f8f8; /* Color de fondo suave */
+    margin: 0; /* Eliminamos los márgenes predeterminados */
+    padding: 0; /* Eliminamos los rellenos predeterminados */
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el tamaño del elemento */
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Alineamos los elementos a la izquierda */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 200px; /* Agregamos un margen de 13px a la derecha del título */
+}
+
+#cart {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 400px; /* Agregamos un margen de 13px a la izquierda del carrito */
+}
+
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none; /* Eliminamos los puntos de lista */
+    display: flex; /* Usamos Flexbox para la disposición de los elementos */
+    gap: 20px; /* Espaciado entre los elementos del menú */
+}
+
+/* Estilos para los enlaces del menú */
+nav ul li a {
+    color: white; /* Color de texto blanco */
+    text-decoration: none; /* Eliminamos el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 18px; /* Tamaño de la fuente */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces del menú */
+nav ul li a:hover {
+    color: #ff1493; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilo para el carrito de compras */
+#cart {
+    font-size: 1.2em; /* Tamaño de fuente más grande para el carrito */
+    display: flex; /* Utilizamos Flexbox para alinear los elementos */
+    align-items: center; /* Alineación vertical centrada */
+    gap: 5px; /* Espaciado entre el icono y el total del carrito */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+    transition: transform 0.3s ease-in-out; /* Transición suave para la animación */
+}
+
+/* Efecto al pasar el mouse sobre el carrito */
+#cart:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del carrito al pasar el mouse */
+}
+
+/* Estilo para el número del carrito */
+#cart span {
+    font-weight: bold; /* Hacemos que el número sea más negrita */
+}
+
+/* Estilo para la disposición de los productos */
+.catalog-container {
+    display: flex; /* Usamos Flexbox para organizar los productos */
+    justify-content: center; /* Centra los productos horizontalmente */
+    align-items: center; /* Centra los productos verticalmente */
+    flex-wrap: wrap; /* Permite que los productos se envuelvan en varias filas si es necesario */
+    gap: 20px; /* Espaciado entre los productos */
+    padding: 20px; /* Espaciado alrededor de los productos */
+    margin-top: 100px; /* Agregamos espacio encima para evitar que el encabezado fijo se sobreponga */
+}
+
+/* Estilo para cada producto */
+.product {
+    border: 1px solid #ddd; /* Borde suave alrededor del producto */
+    margin: 20px; /* Espaciado entre productos */
+    padding: 20px; /* Espaciado interno del producto */
+    text-align: center; /* Centra el texto dentro de cada producto */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 300px; /* Tamaño máximo para el ancho del producto */
+    background-color: white; /* Fondo blanco para cada producto */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del producto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación para el hover del producto */
+}
+
+/* Cambiar el orden de los productos */
+.product:nth-child(1) {
+    order: 3; /* Mueve el primer producto al tercer lugar */
+}
+
+.product:nth-child(2) {
+    order: 1; /* Mueve el segundo producto al primer lugar */
+}
+
+.product:nth-child(3) {
+    order: 2; /* Mueve el tercer producto al segundo lugar */
+}
+
+/* Efecto de hover en los productos */
+.product:hover {
+    transform: translateY(-10px); /* Desplaza ligeramente el producto hacia arriba */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+/* Estilo para la imagen del producto */
+.product img {
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Ajuste automático de la altura */
+}
+
+/* Estilo para el botón de agregar al carrito */
+.add-to-cart {
+    background-color: #ff69b4; /* Color de fondo rosa para el botón */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto al pasar el mouse sobre el botón de agregar al carrito */
+.add-to-cart:hover {
+    background-color: #ff1493; /* Cambio de color al pasar el mouse */
+}

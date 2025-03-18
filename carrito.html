@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Carrito de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrito -->
+    <main>
+        <section id="cart-items">
+            <!-- Los productos del carrito se agregan dinámicamente aquí -->
+        </section>
+
+        <!-- Total -->
+        <section id="cart-total">
+            <h2>Total: $<span id="total-price">0.00</span></h2>
+        </section>
+
+        <!-- Formulario de pago -->
+        <section id="checkout">
+            <button id="checkout-button" disabled>Proceder al Pago</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Maquillaje. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="carrito.js"></script> <!-- Vincula el archivo JS del carrito -->
+</body>
+</html>
