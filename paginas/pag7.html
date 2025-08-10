@@ -17,22 +17,56 @@
     <!-- Contenido principal -->
     <main style="padding: 30px;">
         <h1>Maquillaje-Audiovisual</h1>
-
-
         <img src="../proyectos/Maquillaje-Audiovisual/maqui-audi1.jpg" alt="Maquillaje Novia" style="max-width: 31%; height: auto;">
         <img src="../proyectos/Maquillaje-Audiovisual/maqui-audi2.jpg" alt="Maquillaje Novia" style="max-width: 35%;  height: auto;">
         <img src="../proyectos/Maquillaje-Audiovisual/maqui-audi3.jpg" alt="Maquillaje Novia" style="max-width: 31%; height: auto;">
-
         <video controls style="max-width: 30%; height: auto;">
             <source src="../proyectos/Maquillaje-Audiovisual/video-audi1.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de videos.
         </video>
         <img src="../proyectos/Maquillaje-Audiovisual/maqui-audi4.jpg" alt="Maquillaje Novia" style="max-width: 30%; height: auto;">
-
         <p>
             El maquillaje audiovisual es una disciplina que combina técnica, creatividad y precisión para realzar la imagen en cine, televisión y producciones digitales. Adaptado a la cámara y la iluminación, este maquillaje busca resaltar rasgos, crear personajes y transmitir emociones que se captan en cada plano. Ya sea para escenas naturales o efectos especiales, el maquillaje audiovisual es clave para contar historias visuales con autenticidad y detalle, logrando que cada imagen cobre vida y conexión con el espectador.
         </p>
     </main>
+
+        <!-- Modal para zoom de imagen -->
+    <div id="modal" class="modal">
+        <span id="cerrar">&times;</span>
+        <img id="modal-img" src="" alt="">
+    </div>
+
+    <script>
+        // Obtener elementos
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const cerrar = document.getElementById("cerrar");
+
+        // Seleccionar todas las imágenes del main
+        const imagenes = document.querySelectorAll("main img");
+
+        // Abrir modal al hacer clic en una imagen
+        imagenes.forEach(img => {
+            img.style.cursor = "zoom-in"; // Cambiar cursor
+            img.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+            });
+        });
+
+        // Cerrar modal al hacer clic en el botón
+        cerrar.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        // Cerrar modal si se hace clic fuera de la imagen
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
 
     <!-- Botón volver -->
     <div style="padding: 20px;">
@@ -41,7 +75,7 @@
 
     <!-- Footer -->
     <footer style="background: #f8d7da; text-align: center; padding: 10px;">
-        <p>&copy; 2025 Tu Nombre o Marca</p>
+        <p>&copy; 2025 Belén Elgueta</p>
     </footer>
 
 </body>
