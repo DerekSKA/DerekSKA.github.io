@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         efectosEspeciales: [
             'proyectos/Efectos-Especiales/efect-espe2.jpg',
-            'proyectos/Efectos-Especiales/efect-espe3.jpg'
+            'proyectos/Efectos-Especiales/efect-espe3.jpg',
+            'proyectos/Efectos-Especiales/efect-espe1.jpg'
+
         ],
         bodyPaint: [
             'proyectos/Body-Paint/maqui-body1.jpg',
@@ -44,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         pestañas: [
             'proyectos/Pestañas/pestañas1.jpg',
-            'proyectos/Pestañas/pestañas2.jpg'
+            'proyectos/Pestañas/pestañas2.jpg',
+            'proyectos/Pestañas/pestañas3.jpg',
+            'proyectos/Pestañas/pestañas4.jpg'
         ],
         envejecimiento: [
             'proyectos/Maquillaje-Envejecimiento/maqui-enveje1.jpg',
@@ -58,11 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
         audiovisual: [
             'proyectos/Maquillaje-Audiovisual/maqui-audi2.jpg',
             'proyectos/Maquillaje-Audiovisual/maqui-audi1.jpg',
-            'proyectos/Maquillaje-Audiovisual/maqui-audi3.jpg'
+            'proyectos/Maquillaje-Audiovisual/maqui-audi3.jpg',
+            'proyectos/Maquillaje-Audiovisual/maqui-audi4.jpg'
         ],
         artistico: [
             'proyectos/Maquillaje-Artistico/maqui-art2.jpg',
-            'proyectos/Maquillaje-Artistico/maqui-art1.jpg'
+            'proyectos/Maquillaje-Artistico/maqui-art1.jpg',
+            'proyectos/Maquillaje-Artistico/maqui-art3.jpg'
         ]
     };
 
@@ -113,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Cambiar imágenes cada 5 segundos (5000 ms)
-    setInterval(cambiarImagenes, 5000);
+    setInterval(cambiarImagenes, 4500);
 
     // ===== MODAL DE IMAGENES =====
     const modal = document.getElementById("modal");
@@ -127,8 +133,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    cerrar.addEventListener("click", () => {
-        modal.style.display = "none";
+    // Cerrar modal si se hace clic fuera de la imagen
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
     });
 
     // ===== MOSTRAR/OCULTAR DESCRIPCIÓN =====
