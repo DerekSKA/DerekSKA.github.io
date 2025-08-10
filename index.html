@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Menú -->
+    <header>
+        <nav>
+            <h1 class="logo">Mi Portafolio</h1>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <img src="img/foto-perfil.jpg" alt="Foto perfil" class="foto-perfil">
+        <div class="hero-text">
+            <h2>Hola, soy <span>Belén Elgueta</span></h2>
+            <p>Maquilladora profesional</p>
+            <div class="botones">
+                <a href="#portfolio" class="btn rosa">Ver Portafolio</a>
+                <a href="CV.pdf" download class="btn dorado">Descargar CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="about">
+        <h2>Sobre mí</h2>
+        <p>
+            Soy Belén, tengo 21 años y soy una apasionada del maquillaje y la belleza. 
+            Como cosmetóloga, me especializo en maquillaje profesional, fusionando técnica, estilo y atención al detalle para realzar la esencia de cada persona. Mi amor por el mundo artístico me lleva también a explorar los efectos especiales, creando looks únicos que van desde la elegancia más sutil hasta las transformaciones más impactantes. Mi misión es que cada cliente viva una experiencia personalizada, sintiéndose radiante, segura y protagonista de su propia historia.
+        </p>
+    </section>
+
+
+
+
+
+     <!-- Portafolio -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portafolio</h2>
+        <div class="galeria">
+
+
+
+        <!-- Proyecto 1 -->
+        <div class="card">
+            <img src="proyectos/Novias/novia2.jpg" alt="Maquillaje 1" class="zoom-img">
+            <a href="paginas/pag1.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Este maquillaje fue realizado para una sesión de fotos especial, con tonos cálidos y estilo elegante.</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="card">
+            <img src="proyectos/Efectos-Especiales/efect-espe1.jpg" alt="Tratamiento 1" class="zoom-img">
+            <a href="paginas/pag2.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Tratamiento facial con hidratación profunda y exfoliación suave, ideal para pieles sensibles.</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="card">
+            <img src="proyectos/Body-Paint/maqui-body1.jpg" alt="Maquillaje 2" class="zoom-img">
+            <a href="paginas/pag3.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Maquillaje artístico para evento temático, con aplicación de pedrería y glitter.</p>
+            </div>
+        </div>
+        
+        <!-- Proyecto 4 -->
+        <div class="card">
+            <img src="proyectos/Pestañas/pestañas1.jpg" alt="Maquillaje 3" class="zoom-img">
+            <a href="paginas/pag4.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Aplicación profesional de pestañas para realzar la mirada con un acabado natural y duradero.</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 5 -->
+        <div class="card">
+            <img src="proyectos/Maquillaje-Envejecimiento/maqui-enveje1.jpg" alt="Maquillaje 4" class="zoom-img">
+            <a href="paginas/pag5.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Maquillaje de envejecimiento para producción teatral, con técnicas realistas de caracterización.</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 6 -->
+        <div class="card">
+            <img src="proyectos/Arlequin/Arlequin1.jpg" alt="Maquillaje 5" class="zoom-img">
+            <a href="paginas/pag6.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Maquillaje de arlequín para eventos y presentaciones, con colores vivos y trazos detallados.</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 7 -->
+        <div class="card">
+            <img src="proyectos/Maquillaje-Audiovisual/maqui-audi2.jpg" alt="Maquillaje 6" class="zoom-img">
+            <a href="paginas/pag7.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Maquillaje para producciones audiovisuales, diseñado para cámara y luces profesionales.</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 8 -->
+        <div class="card">
+            <img src="proyectos/Maquillaje-Artistico/maqui-art2.jpg" alt="Maquillaje 7" class="zoom-img">
+            <a href="paginas/pag8.html" class="btn rosa">Ver más</a>
+            <div class="descripcion oculto">
+                <p>Maquillaje artístico con técnicas creativas y efectos especiales para performances.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Modal para zoom de imagen -->
+    <div id="modal" class="modal">
+        <span id="cerrar">&times;</span>
+        <img id="modal-img" src="" alt="">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn rosa">Enviar</button>
+        </form>
+        <div class="redes">
+            <a href="https://www.instagram.com/belisse.glam/" target="_blank" class="icono instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/+56974526058" target="_blank" class="icono whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:tuemail@correo.com" class="icono email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
