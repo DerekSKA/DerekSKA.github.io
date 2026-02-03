@@ -1,0 +1,377 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="es" data-theme="rose">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Belisse Glam | Makeup & Beauty</title>
+  <meta name="description" content="Servicios de belleza: maquillaje, skincare, uñas. Agenda fácil por WhatsApp. Portfolio y testimonios." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <noscript>
+    <div style="padding:12px 16px; border-bottom:1px solid #ddd; font-family: Inter, system-ui;">
+      Esta web usa JavaScript para algunas funciones (cambio de paleta, modal y WhatsApp). Igual puedes navegar sin problema.
+    </div>
+  </noscript>
+
+  <!-- Top notice -->
+  <div class="topbar" role="status">
+    <span>✨ Agenda abierta — Cupos limitados esta semana</span>
+    <a class="topbar__link" href="#agenda">Agendar</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="inicio">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand__mark">BG</span>
+        <span class="brand__text">Belisse Glam</span>
+      </a>
+
+      <!-- Theme switcher (paletas en vivo) -->
+      <div class="theme-switcher" aria-label="Cambiar paleta de colores">
+        <button class="theme-btn" type="button" data-theme-btn="rose" aria-label="Tema Rose" title="Rose">🌸</button>
+        <button class="theme-btn" type="button" data-theme-btn="champagne" aria-label="Tema Champagne" title="Champagne">🥂</button>
+        <button class="theme-btn" type="button" data-theme-btn="ink" aria-label="Tema Ink" title="Ink">🌙</button>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--small" href="#agenda">Agendar</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="pill">Makeup • Skincare • Nails</p>
+          <h1 class="hero__title">
+            Belleza elegante, <span class="accent">real</span> y a tu estilo.
+          </h1>
+          <p class="hero__subtitle">
+            Servicios profesionales con un look limpio y moderno. Agenda por WhatsApp en 1 minuto y revisa mi portafolio.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#agenda">Agendar ahora</a>
+            <a class="btn btn--ghost" href="#galeria">Ver trabajos</a>
+          </div>
+
+          <div class="hero__stats" aria-label="Indicadores">
+            <div class="stat">
+              <strong>+120</strong>
+              <span>clientes felices</span>
+            </div>
+            <div class="stat">
+              <strong>24h</strong>
+              <span>respuesta promedio</span>
+            </div>
+            <div class="stat">
+              <strong>⭐ 4.9</strong>
+              <span>valoración</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card" aria-label="Tarjeta destacada">
+          <div class="card">
+            <div class="card__badge">Nuevo</div>
+            <h2 class="card__title">Paquete Glow</h2>
+            <p class="card__text">
+              Limpieza facial + hidratación + masaje + guía de rutina.
+            </p>
+
+            <div class="price">
+              <span class="price__label">Desde</span>
+              <span class="price__value" id="priceValue">$25.000</span>
+            </div>
+
+            <div class="card__actions">
+              <button class="btn btn--small" id="priceBtn" type="button">Cambiar moneda</button>
+              <a class="btn btn--small btn--ghost" href="#servicios">Ver detalles</a>
+            </div>
+
+            <ul class="checklist" aria-label="Incluye">
+              <li>Diagnóstico rápido</li>
+              <li>Productos adecuados</li>
+              <li>Recomendación personalizada</li>
+            </ul>
+          </div>
+
+          <div class="hero__note">
+            <span class="dot"></span>
+            <p>Tip: reserva con anticipación para asegurar horario ✨</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Servicios</h2>
+          <p class="section__subtitle">Elige lo que necesitas. Puedes combinar servicios en un mismo día.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="service">
+            <div class="service__icon">💄</div>
+            <h3>Maquillaje</h3>
+            <p>Social, editorial y eventos. Acabado prolijo y duradero.</p>
+            <button class="chip" data-service="Maquillaje" type="button">Seleccionar</button>
+          </article>
+
+          <article class="service">
+            <div class="service__icon">🧴</div>
+            <h3>Skincare</h3>
+            <p>Limpieza profunda, hidratación, rutina y glow natural.</p>
+            <button class="chip" data-service="Skincare" type="button">Seleccionar</button>
+          </article>
+
+          <article class="service">
+            <div class="service__icon">💅</div>
+            <h3>Uñas</h3>
+            <p>Soft gel, manicure y diseño minimal/clean girl.</p>
+            <button class="chip" data-service="Uñas" type="button">Seleccionar</button>
+          </article>
+        </div>
+
+        <div class="bundle">
+          <div class="bundle__left">
+            <h3>Arma tu pack</h3>
+            <p>Selecciona servicios y generamos tu mensaje listo para enviar por WhatsApp.</p>
+          </div>
+          <div class="bundle__right">
+            <div class="bundle__items" id="selectedServices" aria-live="polite">
+              <span class="muted">No seleccionaste nada todavía.</span>
+            </div>
+            <a class="btn" id="whatsBtn" href="#agenda">Enviar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section section--soft" id="galeria">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Galería</h2>
+          <p class="section__subtitle">Ejemplos (placeholders). Cambia por tus fotos reales.</p>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Filtros de galería">
+          <button class="filter is-active" data-filter="all" type="button" role="tab">Todo</button>
+          <button class="filter" data-filter="makeup" type="button" role="tab">Makeup</button>
+          <button class="filter" data-filter="skincare" type="button" role="tab">Skincare</button>
+          <button class="filter" data-filter="nails" type="button" role="tab">Uñas</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <button class="shot" data-cat="makeup" data-title="Makeup social" type="button" aria-label="Abrir Makeup social">
+            <span class="shot__tag">Makeup</span>
+          </button>
+          <button class="shot" data-cat="skincare" data-title="Glow skincare" type="button" aria-label="Abrir Glow skincare">
+            <span class="shot__tag">Skincare</span>
+          </button>
+          <button class="shot" data-cat="nails" data-title="Soft gel nude" type="button" aria-label="Abrir Soft gel nude">
+            <span class="shot__tag">Uñas</span>
+          </button>
+          <button class="shot" data-cat="makeup" data-title="Editorial pink" type="button" aria-label="Abrir Editorial pink">
+            <span class="shot__tag">Makeup</span>
+          </button>
+          <button class="shot" data-cat="nails" data-title="Manicure clean" type="button" aria-label="Abrir Manicure clean">
+            <span class="shot__tag">Uñas</span>
+          </button>
+          <button class="shot" data-cat="skincare" data-title="Rutina hidratante" type="button" aria-label="Abrir Rutina hidratante">
+            <span class="shot__tag">Skincare</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section" id="testimonios">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Testimonios</h2>
+          <p class="section__subtitle">Textos demo (cámbialos por los de tus clientas).</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="quote">
+            <p>“Me dejó la piel hermosa, se nota la dedicación y la técnica. Volvería mil veces.”</p>
+            <footer>— Camila</footer>
+          </article>
+          <article class="quote">
+            <p>“El maquillaje me duró toda la noche y se veía finísimo, nada cargado. Amé.”</p>
+            <footer>— Anto</footer>
+          </article>
+          <article class="quote">
+            <p>“Las uñas quedaron perfectas y prolijas. El detalle es otro nivel.”</p>
+            <footer>— Vale</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--soft" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Preguntas frecuentes</h2>
+          <p class="section__subtitle">Respuestas cortitas para ahorrar DM.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>¿Cómo reservo?</summary>
+            <p>Elige servicio, completa el formulario o envía WhatsApp con tu horario ideal.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto dura?</summary>
+            <p>Depende del servicio. Makeup 60–90 min, skincare 45–70 min, uñas 90–150 min.</p>
+          </details>
+          <details>
+            <summary>¿Qué medios de pago aceptas?</summary>
+            <p>Transferencia y efectivo (puedes ajustar esta info).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+<!-- Agenda -->
+<section class="section" id="agenda">
+  <div class="container agenda">
+    <div class="agenda__left">
+      <h2 class="section__title">Agenda</h2>
+      <p class="section__subtitle">
+        Completa tus datos y te armamos el mensaje listo para enviar. Respondo rápido 💗
+      </p>
+
+      <div class="contact-cards">
+        <!-- Instagram -->
+        <a
+          class="contact"
+          id="igLink"
+          href="https://www.instagram.com/belisse.glam/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Abrir Instagram de Belisse Glam"
+        >
+          <span>Instagram</span>
+          <strong>@belisse.glam</strong>
+        </a>
+
+        <!-- WhatsApp -->
+        <a
+          class="contact"
+          id="waLink"
+          href="https://wa.me/56974526058"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Abrir WhatsApp Belisse Glam"
+        >
+          <span>WhatsApp</span>
+          <strong>+56 9 7452 6058</strong>
+        </a>
+      </div>
+    </div>
+
+    <form class="form" id="form">
+      <label>
+        <span>Nombre</span>
+        <input type="text" name="name" placeholder="Tu nombre" required />
+      </label>
+
+      <label>
+        <span>Servicio</span>
+        <input
+          type="text"
+          name="service"
+          id="serviceInput"
+          placeholder="Ej: Makeup social"
+        />
+      </label>
+
+      <label>
+        <span>Fecha ideal</span>
+        <input type="date" name="date" />
+      </label>
+
+      <label>
+        <span>Mensaje</span>
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Cuéntame qué buscas (ej: maquillaje natural, glow, etc.)"
+        ></textarea>
+      </label>
+
+      <button class="btn" type="submit">Generar WhatsApp</button>
+      <p class="muted small" id="formHint">
+        No se envía nada automáticamente: se abre WhatsApp con el mensaje listo.
+      </p>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__mark">BG</span>
+          <span class="brand__text">Belisse Glam</span>
+        </div>
+        <p class="muted">© <span id="year"></span> — Diseño limpio, rosado y elegante.</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#agenda">Agenda</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Vista de galería">
+    <div class="modal__overlay" data-close="true"></div>
+    <div class="modal__content" role="document">
+      <button class="modal__close" type="button" data-close="true" aria-label="Cerrar">✕</button>
+      <h3 class="modal__title" id="modalTitle">Título</h3>
+      <p class="muted">Aquí iría tu foto real. Este bloque es demo.</p>
+      <div class="modal__fakeimg" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+
+
+

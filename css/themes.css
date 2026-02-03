@@ -1,0 +1,79 @@
+/* css/themes.css */
+
+/* Default (Rose) */
+:root{
+  --bg: #fff7fb;
+  --surface: #ffffff;
+  --soft: #fff0f7;
+
+  --text: #231f22;
+  --text-strong: #231f22;
+  --muted: rgba(35,31,34,.70);
+  --muted-2: rgba(35,31,34,.58);
+
+  --accent: #f38bb3;
+  --accent-soft: rgba(243,139,179,.18);
+  --gold: #9e8123;
+
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-strong: 0 16px 50px rgba(0,0,0,.12);
+
+  --radius: 18px;
+  --radius2: 26px;
+
+  --line: rgba(35,31,34,.10);
+  --line-soft: rgba(35,31,34,.08);
+
+  --panel: rgba(255,255,255,.92);
+  --panel-solid: rgba(255,255,255,.98);
+}
+
+/* Champagne (si lo usas) */
+[data-theme="champagne"]{
+  --bg: #fffaf3;
+  --surface: #ffffff;
+  --soft: #fff2e1;
+
+  --text: #221b16;
+  --text-strong: #221b16;
+  --muted: rgba(34,27,22,.70);
+  --muted-2: rgba(34,27,22,.58);
+
+  --accent: #d98aa6;
+  --accent-soft: rgba(217,138,166,.16);
+  --gold: #c8a65a;
+
+  --line: rgba(34,27,22,.10);
+  --line-soft: rgba(34,27,22,.08);
+
+  --panel: rgba(255,255,255,.92);
+  --panel-solid: rgba(255,255,255,.98);
+
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-strong: 0 16px 50px rgba(0,0,0,.12);
+}
+
+/* 🌙 Ink (oscuro elegante, negro/blanco/rosa) */
+[data-theme="ink"]{
+  --bg: #0b0b0f;
+  --surface: #12121a;
+  --soft: #0f0f15;
+
+  --text: #f5f5f7;
+  --text-strong: #ffffff;
+  --muted: rgba(245,245,247,.74);
+  --muted-2: rgba(245,245,247,.58);
+
+  --accent: #ff6fb1;
+  --accent-soft: rgba(255,111,177,.18);
+  --gold: #2d1c42;
+
+  --line: rgba(255,255,255,.12);
+  --line-soft: rgba(255,255,255,.08);
+
+  --panel: rgba(18,18,26,.78);
+  --panel-solid: rgba(18,18,26,.92);
+
+  --shadow: 0 10px 30px rgba(0,0,0,.55);
+  --shadow-strong: 0 18px 60px rgba(0,0,0,.70);
+}

@@ -1,0 +1,22 @@
+/* css/base.css */
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 420px at 18% 18%, var(--accent-soft), transparent 62%),
+    radial-gradient(820px 420px at 82% 12%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 92%, var(--surface)) 55%, var(--bg));
+}
+
+.container{
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* helpers */
+.small{ font-size: 12px; }
+.muted{ color: var(--muted); }
